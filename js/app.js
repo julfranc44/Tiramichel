@@ -76,7 +76,7 @@ function achatMascarpone() {
     errorMessage.style.display = "none";
   } else {
     errorMessage.textContent =
-      "Impossible d'acheter de la Mascarpone : Vous n'avez pas assez d'argent !";
+      "Impossible d'acheter du Mascarpone : Vous n'avez pas assez d'argent !";
     errorMessage.style.display = "block";
   }
 }
@@ -90,7 +90,7 @@ function achatCafe() {
     errorMessage.style.display = "none";
   } else {
     errorMessage.textContent =
-      "Impossible d'acheter de la Mascarpone : Vous n'avez pas assez d'argent !";
+      "Impossible d'acheter du café : Vous n'avez pas assez d'argent !";
     errorMessage.style.display = "block";
   }
 }

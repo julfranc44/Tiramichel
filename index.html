@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header>
+      <h3>Les Tiraminfos</h3>
+
+      <p id="error-message" style="color: #f4e1c1; display: none"></p>
+    </header>
+    <div class="main-container">
+      <div class="production">
+        <h1>Tiramichel Simulator</h1>
+        <h2>Les tiramiventes <span id="totalTira"> 0 </span></h2>
+
+        <div class="resources">
+          <p>Argent : <span id="money"> 100 </span> €</p>
+          <p>Nombre de Tiramisus produits : <span id="tiramisus"> 0 </span></p>
+          <p>Stocks Café : <span id="coffee"> 50 </span></p>
+          <p>Stocks Mascarpone : <span id="mascarpone"> 50 </span></p>
+          <p>Nombre de Robots : <span id="nbRobot"> 0</span></p>
+          <p>Nombre de Vendeurs : <span id="nbVendeurs"> 0</span></p>
+        </div>
+        <div class="actions">
+          <button onclick="produceTiramisu()">Produire un tiramisu</button>
+          <button onclick = "venteManuelle()">Vendre un Tiramisu</button>
+        </div>
+
+        <div class="price-controls">
+          <h3>Prix du tiramisu</h3>
+          <input type="number" id="priceInput" min="1" max="20" value="5" />
+          <button onclick="updatePrice()">Mettre à jour le prix</button>
+          <p>Prix actuel : <span id="currentPrice">5</span> €</p>
+          <p>Demande actuelle : <span id="pourcentageDemande">100</span>%</p>
+        </div>
+      </div>
+      <div class="achats">
+        <div class="achatMascarpone">
+          <h3>Acheter de la Mascarpone</h3>
+          <p>Prix pour 20 stocks : <span id="priceMascarpone"> 30 </span> €</p>
+          <button onclick="achatMascarpone()">Acheter de la Mascarpone</button>
+        </div>
+
+        <div class="achatCafe">
+          <h3>Acheter du Café</h3>
+          <p>Prix pour 20 stocks : <span id="priceCafe"> 40 </span> €</p>
+          <button onclick="achatCafe()">Acheter du café</button>
+        </div>
+
+        <div class="achatVendeur">
+          <h3>Acheter un vendeur</h3>
+          <p>Prix d'un vendeur : 50 €</p>
+          <button onclick="acheterVendeur()">Acheter un Vendeur</button>
+        </div>
+
+        <div class="achatRobot">
+          <h3>Acheter un robot</h3>
+          <p>Prix d'un robot : 100 €</p>
+          <button onclick="acheterRobot()">Acheter un robot</button>
+        </div>
+      </div>
+      <div id="event1" style="display: none;">
+        <button onclick="activerEvent1()">Débloquer une nouvelle recette !</button>
+      </div>
+      <div id="event2" style="display: none;">
+        <button onclick="activerEvent2()">Débloquer une nouvelle recette !</button>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
